@@ -14,4 +14,4 @@ firstName = "Max"; // Wertzuweisung | Assignment
 console.log("Inhalt: " + firstName); // Ausgabe mit Inhalt
 let familyName = "Mütze"; // Deklaration & Wertzuweisung
 // Trennen von Strings mit , (entählt Leerzeichen) oder + (kein Leerzeichen)
-console.log("Sei gegrüßt" , firstName + " " + familyName + ", lebe lang und in Frieden!");
+console.log("Sei gegrüßt" , firstName , familyName + ", lebe lang und in Frieden!");
