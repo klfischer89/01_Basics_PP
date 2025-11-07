@@ -13,4 +13,10 @@ const prompt = require('prompt-sync')({sigint: true}); // provide functions of p
 let digit_one = Number(prompt("Zahl 1: ")); // Enter digit one and cast to number 
 let digit_two = Number(prompt("Zahl 2: ")); // Enter digit two and cast to number
 let sum = digit_one + digit_two; // add the two numbers
-console.log("Die Summe der Zahlen ist:" , sum); // Output sum of the two numbers
+
+// catch input that are no numbers
+if (isNaN(sum)) {
+    console.log("Bitte nur Zahlen eingeben!") // hint only to input numbers
+} else {
+    console.log("Die Summe der Zahlen ist:" , sum); // Output sum of the two numbers
+}
