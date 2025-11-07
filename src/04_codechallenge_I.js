@@ -13,9 +13,7 @@ Geben Sie die Summe der Zahlen in die Konsole aus:
 const prompt = require('prompt-sync')({sigint: true});
 
 // provide variables for calculating a sum of two numbers
-let digit_one;
-let digit_two;
-let sum;
+let digit_one, digit_two, sum;
 
 // function for adding two numbers and safe the result in sum
 function add_two_numbers(){
