@@ -8,15 +8,36 @@ Berechnen Sie die Summe der beiden Zahlen.
 Geben Sie die Summe der Zahlen in die Konsole aus:
 "Die Summe der Zahlen ist: summe"
 */
+ 
+// provide functions of promp-sync as prompt constant
+const prompt = require('prompt-sync')({sigint: true});
 
-const prompt = require('prompt-sync')({sigint: true}); // provide functions of promp-sync as prompt constant
-let digit_one = Number(prompt("Zahl 1: ")); // Enter digit one and cast to number 
-let digit_two = Number(prompt("Zahl 2: ")); // Enter digit two and cast to number
-let sum = digit_one + digit_two; // add the two numbers
+// provide variables for calculating a sum of two numbers
+let digit_one;
+let digit_two;
+let sum;
+
+// function for adding two numbers and safe the result in sum
+function add_two_numbers(){
+    // Enter digit one and cast to number 
+    digit_one = Number(prompt("Zahl 1: ")); 
+    // Enter digit two and cast to number
+    digit_two = Number(prompt("Zahl 2: ")); 
+    // add the two numbers
+    sum = digit_one + digit_two; 
+};
+
+// call function for adding two numbers
+add_two_numbers(); 
 
 // catch input that are no numbers
 if (isNaN(sum)) {
-    console.log("Bitte nur Zahlen eingeben!") // hint only to input numbers
+    // hint only to input numbers
+    console.log("Bitte nur Zahlen eingeben!") 
+    // call function for adding two numbers again
+    add_two_numbers(); 
 } else {
-    console.log("Die Summe der Zahlen ist:" , sum); // Output sum of the two numbers
+    // Output sum of the two numbers
+    console.log("Die Summe der Zahlen ist:" , sum); 
 }
+
