@@ -16,19 +16,30 @@ Alter 13-17 // Cola
 
 /* Getränke-Challenge */
 
+// provide functions of prompts in const prompt
 const prompt = require('prompt-sync')({sigint: true});
 
-// Define name and age via prompt
-const name = prompt("Bitte Namen eingeben: ");
-const age = Number(prompt("Bitte Alter eingeben: "));
+// Declerate name and age
+let name, age;
 
-// Define conditions for what drink at what age
+// Declerate conditions for what to drink at what age
 let ageMilk, ageJuice, ageCola;
 
+// Function for input of name and number
+function inputNameAndAge(){
+
+// Assign name and age using prompts
+name = prompt("Bitte Namen eingeben: ");
+age = Number(prompt("Bitte Alter eingeben: "));
+
+// Assign conditions for what drink at what age
 ageMilk = age > 0 && age < 6;
 ageJuice = age >= 6 && age < 13;
 ageCola = age >= 13 && age < 18;
+}
 
+// Function to determine Drink
+function determineDrink(){
 // Switch case to determine what to trink
 switch (true) {
     case (ageMilk):
@@ -46,6 +57,7 @@ switch (true) {
 }
 
 // If Statement to determine what to drink
+/** 
 if (ageMilk) {
     console.log(name, "trinkt Milch.")
 } else if(ageJuice){
@@ -55,4 +67,20 @@ if (ageMilk) {
 } else{
     console.log(name, "trinkt Wein.")
 }
+*/
+}
+
+// Call function for User input
+inputNameAndAge();
+
+// Catch if name ist not a number and call input function again
+if (isNaN(age)) {
+    // hint only to input numbers
+    console.log("Bitte für das Alter nur Zahlen eingeben!") 
+    // call function for adding two numbers again
+    inputNameAndAge(); 
+}
+
+// call function to determine drink
+determineDrink();
 
