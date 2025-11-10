@@ -12,8 +12,8 @@ isJohnOlder = (ageJohn > ageMark);
 isJohnEqual = (ageJohn == ageMark);
 
 // Ausgabe
-console.log("ageJohn: " + ageJohn);
-console.log("ageMark: " + ageMark);
+// console.log("ageJohn: " + ageJohn);
+// console.log("ageMark: " + ageMark);
 // console.log("isJohnOlder: " + isJohnOlder);
 // console.log("isJohnEqual: " + isJohnEqual);
 // console.log("------------------");
@@ -47,10 +47,41 @@ console.log("ageMark: " + ageMark);
 /************ IF - ELSE IF  ************/
 // mit alternativen Fällen (älter, jünger, gleich alt)
 
-if (isJohnOlder) {
-    console.log("John ist älter.");
-} else if(isJohnEqual) {
-    console.log("John und Mark sind gleich alt.");
-} else {
-    console.log("John ist jünger.");
+// if (isJohnOlder) {
+//     console.log("John ist älter.");
+// } else if(isJohnEqual) {
+//     console.log("John und Mark sind gleich alt.");
+// } else {
+//     console.log("John ist jünger.");
+// }
+
+/****** Fallunterscheidung / SWITCH|CASE 1 ******/
+
+const firstName = "Jane";
+let job;
+
+// job = "driver";      // .. fährt TAXI! / UBER
+// job = "diver";       // .. taucht im Rhein!
+// job = "artist";      // .. malt ein Bild!
+// job = "pilot";       // .. macht etwas anderes! --> default
+// job = "teacher";     // .. unterrichtet!
+// job = "instructor";  // .. unterrichtet!
+
+switch (job) {
+    case "driver":
+        console.log(firstName, "fährt Taxi!")
+        break;
+    case "diver":
+        console.log(firstName, "taucht im Rhein!")
+        break;
+    case "artist":
+        console.log(firstName, "malt ein Bild!")
+        break;
+    case "teacher":
+    case "instructor":
+        console.log(firstName, "unterrichtet!")
+        break;
+    default:
+        console.log(firstName, "macht etwas anderes!")
+        break;
 }
