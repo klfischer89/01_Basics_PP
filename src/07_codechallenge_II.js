@@ -74,9 +74,9 @@ if (ageMilk) {
 inputNameAndAge();
 
 // Catch if name ist not a number and call input function again
-if (isNaN(age)) {
+if (isNaN(age) || age == 0) {
     // hint only to input numbers
-    console.log("Bitte für das Alter nur Zahlen eingeben!") 
+    console.log("Bitte für das Alter nur Zahlen größer 0 eingeben!") 
     // call function for adding two numbers again
     inputNameAndAge(); 
 }
