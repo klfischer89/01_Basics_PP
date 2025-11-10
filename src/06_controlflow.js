@@ -57,8 +57,8 @@ isJohnEqual = (ageJohn == ageMark);
 
 /****** Fallunterscheidung / SWITCH|CASE 1 ******/
 
-const firstName = "Jane";
-let job;
+// const firstName = "Jane";
+// let job;
 
 // job = "driver";      // .. fährt TAXI! / UBER
 // job = "diver";       // .. taucht im Rhein!
@@ -67,6 +67,7 @@ let job;
 // job = "teacher";     // .. unterrichtet!
 // job = "instructor";  // .. unterrichtet!
 
+/** 
 switch (job) {
     case "driver":
         console.log(firstName, "fährt Taxi!")
@@ -83,5 +84,23 @@ switch (job) {
         break;
     default:
         console.log(firstName, "macht etwas anderes!")
+        break;
+}
+*/
+
+/******** Fallunterscheidung / SWITCH|CASE 2 *******/
+
+const cond = false;
+const value = 1;
+
+switch (cond) {
+    case (value == 1):
+        console.log("Case 1.");
+        break;
+    case (value == 2):
+        console.log("Case 2.");
+        break;
+    default:
+        console.log("Value hat einen anderen Wert.");
         break;
 }
