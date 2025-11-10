@@ -28,46 +28,46 @@ let ageMilk, ageJuice, ageCola;
 // Function for input of name and number
 function inputNameAndAge(){
 
-// Assign name and age using prompts
-name = prompt("Bitte Namen eingeben: ");
-age = Number(prompt("Bitte Alter eingeben: "));
+    // Assign name and age using prompts
+    name = prompt("Bitte Namen eingeben: ");
+    age = Number(prompt("Bitte Alter eingeben: "));
 
-// Assign conditions for what drink at what age
-ageMilk = age > 0 && age < 6;
-ageJuice = age >= 6 && age < 13;
-ageCola = age >= 13 && age < 18;
+    // Assign conditions for what drink at what age
+    ageMilk = age > 0 && age < 6;
+    ageJuice = age >= 6 && age < 13;
+    ageCola = age >= 13 && age < 18;
 }
 
 // Function to determine Drink
 function determineDrink(){
-// Switch case to determine what to trink
-switch (true) {
-    case (ageMilk):
-        console.log(name, "trinkt Milch.")
+    // Switch case to determine what to trink
+    switch (true) {
+        case (ageMilk):
+            console.log(name, "trinkt Milch.")
+            break;
+        case (ageJuice):
+            console.log(name, "trinkt Saft.")
         break;
-    case (ageJuice):
-        console.log(name, "trinkt Saft.")
-    break;
-    case (ageCola):
-        console.log(name, "trinkt Cola.")
-    break;
-    default:
-        console.log(name, "trinkt Wein.")
+        case (ageCola):
+            console.log(name, "trinkt Cola.")
         break;
-}
+        default:
+            console.log(name, "trinkt Wein.")
+            break;
+    }
 
-// If Statement to determine what to drink
-/** 
-if (ageMilk) {
-    console.log(name, "trinkt Milch.")
-} else if(ageJuice){
-    console.log(name, "trinkt Saft.")
-} else if(ageCola){
-    console.log(name, "trinkt Cola.")
-} else{
-    console.log(name, "trinkt Wein.")
-}
-*/
+    // If Statement to determine what to drink
+    /** 
+    if (ageMilk) {
+        console.log(name, "trinkt Milch.")
+    } else if(ageJuice){
+        console.log(name, "trinkt Saft.")
+    } else if(ageCola){
+        console.log(name, "trinkt Cola.")
+    } else{
+        console.log(name, "trinkt Wein.")
+    }
+    */
 }
 
 // Call function for User input
