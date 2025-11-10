@@ -77,7 +77,7 @@ inputNameAndAge();
 if (isNaN(age) || age <= 0) {
     // hint only to input numbers
     console.log("Bitte für das Alter nur Zahlen größer 0 eingeben!") 
-    // call function for adding two numbers again
+    // call function for user input again
     inputNameAndAge(); 
 }
 
