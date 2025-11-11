@@ -90,8 +90,15 @@ function output(outputData) {
 
 // 3rd responsibilty: get user input and build list of names
 function fillNames() {
+    // awaiting user input for names
     let firstName = prompt("Vorname: ");
     let familyName = prompt("Nachname: ");
+    // check if names are empty, null or undefined
+    if (!firstName || !familyName) {
+        fillNames();        
+    }
+    // fill names in list
     let names = [firstName, familyName]
+    // return list
     return names;
 }
