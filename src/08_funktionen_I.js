@@ -31,12 +31,23 @@ function ausgabeNamen() {
 // 2b. Parametrisierung + Datenübergabe von AUSSEN
 
 // define global variable for first name
-let firstNameGlobal = prompt("Bitte Namen eingeben: ")
+// let firstNameGlobal = prompt("Bitte Namen eingeben: ")
 
 // call function with param
-ausgabeNamenMitParam(firstNameGlobal);
+// ausgabeNamenMitParam(firstNameGlobal);
 
 // function awaiting a param for first name and greet this person
 function ausgabeNamenMitParam(firstNameGlobal) {
     console.log("Hallo,", firstNameGlobal + "!")
+}
+
+/***** Funktionen 02c *****/
+// 2c. Mehrere Parameter / Argumente
+
+// call function with prompts (user input) as arguments
+ausgabeNamen3(prompt("Vorname: "),prompt("Nachname: "))
+
+// define function awaiting first name and family name as arguments and greet the person by full name
+function ausgabeNamen3(firstName, familyName) {
+    console.log("Hallo,", firstName, familyName + "!");
 }
