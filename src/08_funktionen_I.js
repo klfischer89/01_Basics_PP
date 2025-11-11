@@ -57,7 +57,7 @@ function ausgabeNamen3(firstName, familyName) {
 // Postulat: one function = one job (uncle Bob)
 // SRP single responsibility principle
 
-ausgabeNamenSRP("Max","Mütze");
+// ausgabeNamenSRP("Max","Mütze");
 
 function ausgabeNamenSRP(firstName, familyName) {
 
@@ -67,4 +67,31 @@ function ausgabeNamenSRP(firstName, familyName) {
 
     // 2nd responsibility: string output
     console.log(outputStr);
+}
+
+/***** Funktionen 03b *****/
+
+output(getString(fillNames()))
+
+// 1st responsibility: string composing
+function getString(listOfNames) {
+    const GAP = " ";
+    let outputStr = "Hallo, " + listOfNames[0] + GAP + listOfNames[1] + "!";
+    return outputStr;
+}
+
+// 2nd responsibility: string output
+// output("hi");
+// output(2);
+// output(true);
+function output(outputData) {
+    console.log(outputData);
+}
+
+// 3rd responsibilty: get user input and build list of names
+function fillNames() {
+    let firstName = prompt("Vorname: ");
+    let familyName = prompt("Nachname: ");
+    let names = [firstName, familyName]
+    return names;
 }
