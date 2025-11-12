@@ -26,10 +26,12 @@ let regexOp = /[+\-/*:]/;
 
 startApp()
 
+// main function
 function startApp() {
 	output(calculator(getNum(),getNum(),getOp()));
 }
 
+// get number by user input, check if its a number, if not get new user input
 function getNum() {
 	number = Number(prompt("Zahl?: "));
 	if (isNaN(number)) {
@@ -39,6 +41,7 @@ function getNum() {
 	return number;
 }
 
+// get operator by user input, check if its a valid operator, if not get new user input
 function getOp() {
 	op = prompt("OP?: ");
 	if (!regexOp.test(op)) {
