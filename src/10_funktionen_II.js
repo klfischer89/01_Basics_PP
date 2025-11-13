@@ -36,7 +36,7 @@ function getNum() {
 	number = Number(prompt("Zahl?: "));
 	if (isNaN(number)) {
 		console.error(ERROR_STR_NUM);
-		getNum();
+		return getNum();
 	}
 	return number;
 }
@@ -46,7 +46,7 @@ function getOp() {
 	op = prompt("OP?: ");
 	if (!regexOp.test(op)) {
 		console.error(ERROR_STR_OP);
-		getOp();
+		return getOp();
 	}
 	return op;
 }
