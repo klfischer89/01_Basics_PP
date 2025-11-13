@@ -32,7 +32,6 @@ function getSentence(arr,op) {
 
     // initialize map for punctuation marks
     let map = initOpAndPunct();
-
     // provide space for strings
     const GAP = " ";
 
@@ -70,8 +69,9 @@ function determinePunct(map, op){
 }
 
 // initialize map containing valid operators as keys and punctuations as values 
- output(initOpAndPunct());
+// output(initOpAndPunct());
 function initOpAndPunct(){
+    
     let map = new Map([
         ["S", "."],
         ["Q", "?"],
