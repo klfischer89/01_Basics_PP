@@ -20,6 +20,7 @@ const ERROR_STR_OP = "Bitte nur gültige Operatoren eingeben!\nGültige Operator
 
 // define variables
 let number, op;
+// regular expression to check if operator is one of the following, + - / * :
 let regexOp = /[+\-/*:]/;
 
 /** Dateneingabe */
