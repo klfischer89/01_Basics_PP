@@ -26,7 +26,8 @@ output(getSentence(["Ich","hätt","gern","die","Platt","von","dene","zwei","diwo
 output(getSentence(["Ich","bin","Max"],"a"));
 output(getSentence(["Bist","du","Max"],"C"));
 output(getSentence(["Ich","bin"],1));
-output(getSentence(["Ich","hätt","gern","die","Platt","von","dene","zwei","diwodaso","Spass","mache,","habbe","Sie","die"],true));
+output(getSentence(["Ich","hätt","gern","die","Platt","von","dene","zwei","diwodaso","Spass","mache,","habbe","Sie","die"],));
+output(getSentence(["Ich","bin","Max"],""));
 */
 function getSentence(arr,op) {
 
