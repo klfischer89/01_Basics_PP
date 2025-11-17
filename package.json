@@ -2,7 +2,7 @@
   "name": "01_basics_pp",
   "version": "1.0.0",
   "description": "JS Basics",
-  "main": "src/12_codechallenge_IV.js",
+  "main": "src/14_objects.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
